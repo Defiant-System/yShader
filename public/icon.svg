@@ -1,0 +1,30 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 55">
+	<style type="text/css">
+		.st0{fill:url(#SVGID_1_);}
+		.st1{fill:url(#SVGID_2_);filter:url(#defapp-filter-1);}
+		.st2{fill:#E9E9E9;filter:url(#defapp-filter-1);}
+	</style>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="27.5" y1="2.9993" x2="27.5" y2="52.0007">
+		<stop offset="0" style="stop-color:#2AC8FA"/>
+		<stop offset="1" style="stop-color:#1F66EB"/>
+	</linearGradient>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="27.5" y1="1.934" x2="27.5" y2="53.066">
+		<stop offset="0" style="stop-color:#eee"/>
+		<stop offset="1" style="stop-color:#bbb"/>
+	</linearGradient>
+	<filter filterUnits="objectBoundingBox" id="defapp-filter-1">
+		<feOffset dx="0" dy=".5" in="SourceAlpha" result="defappShadowOffsetOuter1"></feOffset>
+		<feGaussianBlur stdDeviation=".5" in="defappShadowOffsetOuter1" result="defappShadowBlurOuter1"></feGaussianBlur>
+		<feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="defappShadowBlurOuter1" result="defappShadowMatrixOuter1"></feColorMatrix>
+		<feMerge>
+			<feMergeNode in="defappShadowMatrixOuter1"/>
+			<feMergeNode in="SourceGraphic"/>
+		</feMerge>
+	</filter>
+	<circle class="st0" cx="27.5" cy="27.5" r="24.5"/>
+	<path class="st1" d="M27.5,1.9C13.4,1.9,1.9,13.4,1.9,27.5s11.4,25.6,25.6,25.6s25.6-11.4,25.6-25.6S41.6,1.9,27.5,1.9z M27.5,50.9 c-12.9,0-23.4-10.5-23.4-23.4S14.6,4.1,27.5,4.1s23.4,10.5,23.4,23.4S40.4,50.9,27.5,50.9z"/>
+	<path class="st2" d="M42.3,29.4h-5.6l-6.1-10.6c-1.5,0.9-2.3,4.3-1.3,6l8.4,14.6c0.6,1,1.8,1.3,2.8,0.8c1-0.6,1.3-1.8,0.8-2.8 l-2.2-3.8h3.2c1.1,0,2.1-0.9,2.1-2.1C44.4,30.3,43.5,29.4,42.3,29.4z"/>
+	<path class="st2" d="M29.6,29.4H23l9.1-15.7c0.6-1,0.2-2.2-0.7-2.8c-1-0.6-2.2-0.2-2.8,0.7l-1.1,1.8l-1.1-1.8 c-0.6-1-1.8-1.3-2.8-0.8c-1,0.6-1.3,1.8-0.8,2.8l2.2,3.9l-6.9,11.8h-5.6c-1.1,0-2.1,0.9-2.1,2.1c0,1.1,0.9,2.1,2.1,2.1h19.1 C32.9,32.3,31.7,29.5,29.6,29.4z"/>
+	<path class="st2" d="M15.1,34.8l-1.4,2.5c-0.6,1-0.2,2.2,0.7,2.8c1,0.6,2.2,0.2,2.8-0.7l2-3.4C18.4,34.3,15.8,34.4,15.1,34.8z"/>
+</svg>

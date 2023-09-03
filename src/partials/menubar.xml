@@ -1,0 +1,31 @@
+<MenuBar>
+	<Menu name="y-Shader">
+		<Menu name="About y-Shader" shell="win -a"/>
+		<Menu type="divider"/>
+		<Menu name="Debug Mode" click="set-debug-mode"/>
+		<Menu name="Shaders" for="shaders"/>
+		<Menu name="Quality&#8230;" for="quality">
+			<Menu name="High" click="set-quality" arg="1" check-group="shader-quality" is-checked="1"/>
+			<Menu name="Medium" click="set-quality" arg="2" check-group="shader-quality"/>
+			<Menu name="Low" click="set-quality" arg="4" check-group="shader-quality"/>
+			<Menu name="Very Low" click="set-quality" arg="8" check-group="shader-quality"/>
+		</Menu>
+		<Menu type="divider"/>
+		<Menu name="Quit y-Shader" shell="win -c"/>
+	</Menu>
+	<Menu name="Help">
+		<Menu name="Help" click="open-help"/>
+		<Menu type="divider"/>
+		<Menu name="License"/>
+	</Menu>
+
+	<Menu for="main-content">
+		<Menu name="Debug Mode" click="set-debug-mode"/>
+		<Menu type="divider"/>
+		<Menu name="Shaders&#8230;" invoke="shaders"/>
+		<Menu name="Quality&#8230;" invoke="quality"/>
+		<Menu type="divider"/>
+		<Menu name="Toggle Shader" click="pause-shader"/>
+		<Menu name="Restore Window" click="restore-window"/>
+	</Menu>
+</MenuBar>
