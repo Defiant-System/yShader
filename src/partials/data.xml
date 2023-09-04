@@ -1,5 +1,6 @@
 <Data>
 	<Shaders>
 		@import "shaders/Vortex.xml"
+		@import "shaders/Fractal-art.xml"
 	</Shaders>
 </Data>

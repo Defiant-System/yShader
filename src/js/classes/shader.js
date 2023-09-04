@@ -14,12 +14,6 @@ class Shader {
 		this.mState = 0;
 		this.mActiveDoc = 0;
 
-		this.resetQualities();
-		this.mAutoQuality = quality === "auto";
-		this.mQuality = quality === "auto" ? 1 : quality;
-		this.fpsLog = [];
-		this.mDebug = debug;
-
 		this.mCanvas = canvas;
 		// this.mCanvas.width = canvas.offsetWidth;
 		// this.mCanvas.height = canvas.offsetHeight;
@@ -48,6 +42,12 @@ class Shader {
 		
 		this.mMediaRecorder = null;
 		this.mCreated = true;
+
+		this.resetQualities();
+		this.mAutoQuality = quality === "auto";
+		this.quality = quality === "auto" ? 1 : quality;
+		this.fpsLog = [];
+		this.mDebug = debug;
 	}
 
 	resetQualities() {

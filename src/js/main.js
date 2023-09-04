@@ -57,6 +57,9 @@ const yshader = {
 						// "is-checked": 1,
 					}));
 				break;
+			case "window.resize":
+				Self.shader.quality = Self.shader.quality;
+				break;
 			// custom events
 			case "open-help":
 				karaqu.shell("fs -u '~/help/index.md'");
@@ -126,7 +129,7 @@ const yshader = {
 			data.renderpass.push(pass);
 		});
 		// init shader, in not already
-		if (!this.shader) this.shader = new Shader(this.els.canvas[0], "auto", this.debug);
+		if (!this.shader) this.shader = new Shader(this.els.canvas[0], 1, this.debug);
 		// return console.log(data);
 		this.shader.Load(data);
 		// reset & play if paused
