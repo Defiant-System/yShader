@@ -31,8 +31,12 @@ const yshader = {
 				iChannel3: window.find(".iChannel3")[0],
 			}
 		};
+		
 		// check debug mode
 		if (this.debug) this.els.content.addClass("debug");
+
+		// instantiate shader object
+		this.shader = new Shader(this.els.canvas[0], 1, this.debug);
 
 		// DEV-ONLY-START
 		Test.init(this);
@@ -60,6 +64,11 @@ const yshader = {
 			case "window.resize":
 				Self.shader.quality = Self.shader.quality;
 				break;
+			case "window.close":
+				if (Self.opener) {
+					Self.opener.callback({ ...Self.opener, type: "yshader-close" });
+				}
+				break;
 			// custom events
 			case "open-help":
 				karaqu.shell("fs -u '~/help/index.md'");
@@ -74,6 +83,21 @@ const yshader = {
 			case "toggle-shader":
 			case "pause-shader":
 				Self.pause();
+				break;
+			case "run-shader":
+				Self.shader.Load({
+					ver: "0.1",
+					renderpass: [{
+						inputs: [],
+						outputs: [],
+						type: "image",
+						code: event.code,
+					}],
+				});
+				// save referennce to opener
+				Self.opener = event;
+				// reset & play if paused
+				if (Self.shader.paused) Self.shader.resetPlay();
 				break;
 		}
 	},

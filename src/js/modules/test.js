@@ -7,7 +7,7 @@ let Test = {
 
 		// temp
 		// window.maximize();
-		APP.start("Fractal-art");
+		// APP.start("Fractal-art");
 		// setTimeout(() => APP.els.canvas.trigger("click"), 5000);
 	}
 };
