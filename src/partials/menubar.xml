@@ -20,12 +20,8 @@
 	</Menu>
 
 	<Menu for="main-content">
-		<Menu name="Debug Mode" click="set-debug-mode"/>
-		<Menu type="divider"/>
-		<Menu name="Shaders&#8230;" invoke="shaders"/>
 		<Menu name="Quality&#8230;" invoke="quality"/>
 		<Menu type="divider"/>
 		<Menu name="Toggle Shader" click="pause-shader"/>
-		<Menu name="Restore Window" click="restore-window"/>
 	</Menu>
 </MenuBar>
