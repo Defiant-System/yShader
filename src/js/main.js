@@ -83,8 +83,16 @@ const yshader = {
 			case "toggle-shader":
 			case "pause-shader":
 				Self.pause();
+
+				if (Self.opener) {
+					Self.opener.callback({ ...Self.opener, type: "yshader-play-toggle", play: !Self.shader.paused });
+				}
 				break;
 			case "run-shader":
+				if (Self.opener && !Self.shader.paused) {
+					Self.opener.callback({ ...Self.opener, type: "yshader-play-toggle", play: false });
+				}
+
 				Self.shader.Load({
 					ver: "0.1",
 					renderpass: [{
