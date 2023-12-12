@@ -2,7 +2,7 @@
 	<Head>
 		<meta name="id" value="yshader"/>
 		<meta name="title" value="yShader" version="1.2"/>
-		<meta name="author" value="Hakan Bilgin" namespace="ant"/>
+		<meta name="author" value="Hakan Bilgin" namespace="sys"/>
 		<meta name="license" value="AGPL-3.0"/>
 		<meta name="repository" value="https://github.com/Defiant-System/yshader"/>
 		<meta name="width" value="400"/>
